@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border:0;
+    color: white;
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+body{
+    padding: 0 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 10px;
+
+    >p{
+        width: 60%;
+        height: 100%;
+        /* border: 1px solid white; */
+        display: inherit;
+        align-items: inherit;
+        -webkit-app-region: drag;
+
+        >img{
+            width: 50%;
+        }
+    }
+
+
+    >span{
+        display: inherit;
+        align-items: inherit;
+    }
+
+    #close{
+        padding: 7px 16px;
+        background-color: inherit;
+        display: grid;
+        place-content: center;
+    }
+
+    #close:hover{background-color: red;}
+}
+
+.profile{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    margin: 0 10px;
+    display: grid;
+    place-content: center;
+    background-color: rgb(33, 33, 33);
+
+    >img{
+        width: 65%;
+        margin: 0 auto;
+        aspect-ratio: 1/1;
+        border-radius: inherit;
+    }
+}
+
+.profile:hover{
+    scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+}
+
+.btn{
+    padding: 7px 15px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-size: small;
+    font-weight: 900;
+    display: grid;
+    place-content: center;
+
+    >*{
+        color: black;
+    }
+}
+
+.btn:active{
+    background-color: green;
+}
+
+#content{
+    display: flex;
+    column-gap: 10px;
+    background-color: black;
+    padding: 10px;
+    .name{
+        width: 400px;
+        font-size: 36px;
+        font-weight: bold;
+        white-space: nowrap;         /* Prevents text from wrapping to the next line */
+        overflow: hidden;            /* Hides the overflowed text */
+        text-overflow: ellipsis;
+    }
+
+    .artist{
+        color: gray;
+    }
+}
+
+#lyrics {
+    height: 60px;
+    overflow-y: auto;
+    padding: 0 10px;
+    /* margin: 10px 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgba(0, 0, 0, 0.366);
+
+    >p{
+        color: gray;
+        -webkit-app-region: drag;
+    }
+
+    :nth-last-child(2){
+        font-size: large;
+        font-weight: 900;
+        color: white;
+        text-shadow: 1px 1px black;
+    }    
+}
