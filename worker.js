@@ -9,6 +9,7 @@ parentPort.on('message', (msg) => {
         const server = createServer((req, res)=>{
             if(req.url.startsWith('/?code=')){
                 const query = querystring.parse(req.url.split('?')[1]);
+                console.log(query);
                 res.end('Authentication successful! You can close this window.');
                 parentPort.postMessage(query); // Return URL parameters
                 server.close(); // Stop the server once done
